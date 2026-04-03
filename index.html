@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMS7x - Moda Internacional</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#fff; color:#111; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:15px 30px; background:#000; color:#fff; }
+    .logo { font-size:24px; font-weight:bold; }
+    .logo span { font-size:30px; }
+    .nav a { color:#fff; margin-left:15px; text-decoration:none; }
+    .hero { padding:60px 20px; text-align:center; background:#111; color:#fff; }
+    .hero h1 { font-size:36px; }
+    .btn { background:#fff; color:#000; padding:12px 25px; text-decoration:none; font-weight:bold; display:inline-block; margin-top:20px; cursor:pointer; }
+    .products { padding:40px 20px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
+    .card { border:1px solid #ddd; padding:15px; text-align:center; }
+    .card img { width:100%; }
+    footer { background:#000; color:#fff; padding:30px; }
+    .whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:15px; border-radius:50%; text-decoration:none; }
+
+    /* LOGIN MODAL */
+    .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7); }
+    .modal-content { background:#fff; margin:10% auto; padding:30px; width:300px; text-align:center; border-radius:10px; }
+    .modal input { width:100%; padding:10px; margin:10px 0; }
+    .close { float:right; cursor:pointer; font-size:20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">EMS<span>7x</span> ⚡</div>
+  <div class="nav">
+    <a href="#produtos">Loja</a>
+    <a onclick="openLogin()">Login</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Moda internacional direto da China</h1>
+  <p>Estilo urbano a preços acessíveis</p>
+  <a href="#produtos" class="btn">Comprar agora</a>
+</section>
+
+<section class="products" id="produtos">
+  <h2>Produtos em destaque</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://ae01.alicdn.com/kf/Sample-Product-Image.jpg">
+      <h3>Hoodie Streetwear</h3>
+      <p>1200 MT</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://ae01.alicdn.com/kf/Sample-Product-Image.jpg">
+      <h3>Conjunto Urbano</h3>
+      <p>1200 MT</p>
+      <button>Comprar</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>Contato WhatsApp: 843764719</p>
+  <p>Pagamentos: M-Pesa | e-Mola</p>
+  <p>Envio: 15-35 dias (direto da China)</p>
+  <p>&copy; EMS7x</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/258843764719">Chat</a>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLogin()">&times;</span>
+    <h2>Login</h2>
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Senha">
+    <button class="btn">Entrar</button>
+    <p>Não tem conta? Criar conta</p>
+  </div>
+</div>
+
+<script>
+function openLogin() {
+  document.getElementById('loginModal').style.display = 'block';
+}
+function closeLogin() {
+  document.getElementById('loginModal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
